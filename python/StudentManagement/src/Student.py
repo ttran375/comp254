@@ -23,4 +23,8 @@ class Student:
         self.studentEmail = studentEmail
 
     def __str__(self):
-        return f"Student[studentId={self.studentId}, studentName='{self.studentName}', studentEmail='{self.studentEmail}']"
+        return (
+            f"Student[studentId={self.studentId}, "
+            f"studentName='{self.studentName}', "
+            f"studentEmail='{self.studentEmail}']"
+        )
