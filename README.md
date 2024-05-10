@@ -2,4 +2,4 @@
 
 ## Week 1
 
-- In-Class Exercises: Bubble sort
+- In-Class Exercises: StudentManagement
