@@ -8,8 +8,7 @@
         "redhat.fabric8-analytics",
         "sohibe.java-generate-setters-getters",
         "streetsidesoftware.code-spell-checker",
-        "DavidAnson.vscode-markdownlint",
-        "Oracle.oracledevtools"
+        "DavidAnson.vscode-markdownlint"
       ]
     }
   }
