@@ -8,7 +8,7 @@
         "--ignore=E501"
     ],
     "pylint.args": [
-        "--disable=E0202"
+        "--disable=E0202,C0114"
     ],
     "files.insertFinalNewline": true
 }
