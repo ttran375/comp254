@@ -274,11 +274,13 @@ public class SinglyLinkedList<E> implements Cloneable {
     }
     tail = walk;
     walk.setNext(null);
+    size--;
   }
 
   private boolean search(String string) {
     // TODO Auto-generated method stub
-    // walkthrough all nodes and compare with airport that needs
+    // walkthrough all nodes and compare
+    // with airport that needs to be searched
     Node walk = head;
     boolean found = false;
     while (walk != null) {
