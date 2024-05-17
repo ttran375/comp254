@@ -268,6 +268,11 @@ public class SinglyLinkedList<E> implements Cloneable {
   private void removeLast() {
     // TODO Auto-generated method stub
     //size-2 update that node to tail
+    Node walk=head;
+    while(walk.getNext()!=tail) {
+      walk=walk.getNext();
+    }
+    tail=walk;
   }
 
   private boolean search(String string) {
