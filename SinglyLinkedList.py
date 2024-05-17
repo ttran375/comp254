@@ -12,6 +12,7 @@ class Node:
     def set_next(self, next_node):
         self.next = next_node
 
+
 class SinglyLinkedList:
     def __init__(self):
         self.head = None
@@ -101,7 +102,7 @@ class SinglyLinkedList:
         while walk is not None:
             elements.append(str(walk.get_element()))
             walk = walk.get_next()
-        return '(' + ', '.join(elements) + ')'
+        return "(" + ", ".join(elements) + ")"
 
     def remove_last(self):
         if self.is_empty():
@@ -129,6 +130,7 @@ class SinglyLinkedList:
             self.tail.set_next(other_list.head)
         self.size += other_list.size
         self.tail = other_list.tail
+
 
 if __name__ == "__main__":
     list1 = SinglyLinkedList()
