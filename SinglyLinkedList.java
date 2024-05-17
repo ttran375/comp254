@@ -261,18 +261,19 @@ public class SinglyLinkedList<E> implements Cloneable {
     System.out.println(list);
     list.removeLast();
     System.out.println(list);
-    // System.out.println(list.search("LAM"));
+    System.out.println(list.search("LAM"));
     //
   }
 
   private void removeLast() {
     // TODO Auto-generated method stub
-    //size-2 update that node to tail
-    Node walk=head;
-    while(walk.getNext()!=tail) {
-      walk=walk.getNext();
+    // size-2 update that node to tail
+    Node walk = head;
+    while (walk.getNext() != tail) {
+      walk = walk.getNext();
     }
-    tail=walk;
+    tail = walk;
+    walk.setNext(null);
   }
 
   private boolean search(String string) {
