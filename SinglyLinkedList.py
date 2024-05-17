@@ -75,6 +75,34 @@ class SinglyLinkedList:
             node = node.next_node
         return "(" + ", ".join(result) + ")"
 
+    def remove_last(self):
+        if self.is_empty():
+            return None
+        if self.size == 1:  # Special case if there's only one element
+            answer = self.head.element
+            self.head = None
+            self.tail = None
+            self.size = 0
+            return answer
+
+        walk = self.head
+        while walk.next_node != self.tail:
+            walk = walk.next_node
+
+        answer = self.tail.element
+        self.tail = walk
+        self.tail.next_node = None
+        self.size -= 1
+        return answer
+
+    def search(self, string):
+        walk = self.head
+        while walk is not None:
+            if walk.element == string:
+                return True
+            walk = walk.next_node
+        return False
+
 
 if __name__ == "__main__":
     list1 = SinglyLinkedList()
@@ -82,4 +110,6 @@ if __name__ == "__main__":
     list1.add_last("ATL")
     list1.add_last("BOS")
     list1.remove_first()
+    list1.remove_last()
+    list1.search("LAM")
     print(list1)

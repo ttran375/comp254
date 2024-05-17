@@ -20,6 +20,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+package linkedlists;
 
 /**
  * A basic singly linked list implementation.
@@ -28,7 +29,7 @@
  * @author Roberto Tamassia
  * @author Michael H. Goldwasser
  */
-public class SinglyLinkedList<E> implements Cloneable {
+public class _SinglyLinkedList<E> implements Cloneable {
   // ---------------- nested Node class ----------------
   /**
    * Node of a singly linked list, which stores a reference to its
@@ -96,7 +97,7 @@ public class SinglyLinkedList<E> implements Cloneable {
   private int size = 0; // number of nodes in the list
 
   /** Constructs an initially empty list. */
-  public SinglyLinkedList() {
+  public _SinglyLinkedList() {
   } // constructs an initially empty list
 
   // access methods
@@ -190,7 +191,7 @@ public class SinglyLinkedList<E> implements Cloneable {
       return false;
     if (getClass() != o.getClass())
       return false;
-    SinglyLinkedList other = (SinglyLinkedList) o; // use nonparameterized type
+    _SinglyLinkedList other = (_SinglyLinkedList) o; // use nonparameterized type
     if (size != other.size)
       return false;
     Node walkA = head; // traverse the primary list
@@ -205,9 +206,9 @@ public class SinglyLinkedList<E> implements Cloneable {
   }
 
   @SuppressWarnings({ "unchecked" })
-  public SinglyLinkedList<E> clone() throws CloneNotSupportedException {
+  public _SinglyLinkedList<E> clone() throws CloneNotSupportedException {
     // always use inherited Object.clone() to create the initial copy
-    SinglyLinkedList<E> other = (SinglyLinkedList<E>) super.clone(); // safe cast
+    _SinglyLinkedList<E> other = (_SinglyLinkedList<E>) super.clone(); // safe cast
     if (size > 0) { // we need independent chain of nodes
       other.head = new Node<>(head.getElement(), null);
       Node<E> walk = head.getNext(); // walk through remainder of original list
@@ -248,7 +249,29 @@ public class SinglyLinkedList<E> implements Cloneable {
     return sb.toString();
   }
 
-  private void concatenate(SinglyLinkedList<String> list2) {
+  // main method
+  public static void main(String[] args) {
+
+    _SinglyLinkedList<String> list1 = new _SinglyLinkedList<String>();
+    list1.addFirst("MSP");
+    list1.addLast("ATL");
+    list1.addLast("BOS");
+    //
+    list1.addFirst("LAX");
+    System.out.println(list1);
+    list.removeLast();
+    System.out.println(list);
+    System.out.println(list.search("LAM"));
+    //
+
+    _SinglyLinkedList<String> list2 = new _SinglyLinkedList<String>();
+    list2.addFirst("YYZ");
+    list2.addFirst("YVR");
+    System.out.println(list2);
+
+  }
+
+  private void concatenate(_SinglyLinkedList<String> list2) {
     // TODO Auto-generated method stub
     // logic for concatenation
     // head of list2 and put it in list1
@@ -256,7 +279,7 @@ public class SinglyLinkedList<E> implements Cloneable {
     // this.addLast(E) list2.head.getElement();
     // set last link to head2
     Node walk = head;
-    while (walk.next != null) {
+    while (walk.getNext() != null) {
       walk = walk.getNext();
     }
     walk.setNext(list2.head);
@@ -265,48 +288,30 @@ public class SinglyLinkedList<E> implements Cloneable {
 
   }
 
-  // main method
-  public static void main(String[] args) {
-
-    // SinglyLinkedList<String> list = new SinglyLinkedList<String>();
-    // list.addFirst("MSP");
-    // list.addLast("ATL");
-    // list.addLast("BOS");
-    // //
-    // list.addFirst("LAX");
-    // System.out.println(list);
-    // //
-
-    // SinglyLinkedList<String> list1 = new SinglyLinkedList<String>();
-    // list1.addFirst("MSP");
-    // list1.addLast("ATL");
-    // list1.addLast("BOS");
-    // //
-    // list1.addFirst("LAX");
-    // System.out.println(list1);
-    // // list1.removeLast();
-    // System.out.println(list1);
-    // // System.out.println(list1.search("LAM"));
-    // //
-
-    // SinglyLinkedList<String> list2 = new SinglyLinkedList<String>();
-    // list2.addFirst("YYZ");
-    // list2.addFirst("YVR");
-    // System.out.println(list2);
-
-    SinglyLinkedList<String> list1 = new SinglyLinkedList<String>();
-    list1.addFirst("MSP");
-    list1.addLast("ATL");
-    list1.addFirst("LAX");
-    // System.out.println(list1);
-
-    SinglyLinkedList<String> list2 = new SinglyLinkedList<String>();
-    list2.addFirst("YYZ");
-    list2.addFirst("YVR");
-    System.out.println(list2);
-
-    list1.concatenate(list2);
-    System.out.println(list1);
+  private void removeLast() {
+    // TODO Auto-generated method stub
+    // size-2 update that node to tail
+    Node walk = head;
+    while (walk.getNext() != tail) {
+      walk = walk.getNext();
+    }
+    tail = walk;
+    walk.setNext(null);
+    size--;
   }
 
+  private boolean search(String string) {
+    // TODO Auto-generated method stub
+    // walkthrough all nodes and compare
+    // with airport that needs to be searched
+    Node walk = head;
+    boolean found = false;
+    while (walk != null) {
+      if (walk.getElement().equals(string)) {
+        found = true;
+      }
+      walk = walk.getNext();
+    }
+    return found;
+  }
 }
