@@ -1,5 +1,6 @@
 from CreditCard import CreditCard
 
+
 class PredatoryCreditCard(CreditCard):
     def __init__(self, cust, bk, acnt, lim, initialBal, rate):
         super().__init__(cust, bk, acnt, lim, initialBal)
@@ -17,11 +18,13 @@ class PredatoryCreditCard(CreditCard):
         return isSuccess
 
 
-def main():
+if __name__ == "__main__":
     wallet = [
         CreditCard("John Bowman", "California Savings", "5391 0375 9387 5309", 5000),
         CreditCard("John Bowman", "California Federal", "3485 0399 3395 1954", 3500),
-        CreditCard("John Bowman", "California Finance", "5391 0375 9387 5309", 2500, 300)
+        CreditCard(
+            "John Bowman", "California Finance", "5391 0375 9387 5309", 2500, 300
+        ),
     ]
 
     for val in range(1, 17):
@@ -35,13 +38,12 @@ def main():
             card.makePayment(200)
             print("New balance =", card.getBalance())
 
-    predatory_card = PredatoryCreditCard("Michael", "Payday", "1111 1111 1111 1111", 2500, 0, 0.0825)
+    predatory_card = PredatoryCreditCard(
+        "Michael", "Payday", "1111 1111 1111 1111", 2500, 0, 0.0825
+    )
     predatory_card.charge(100)
     CreditCard.printSummary(predatory_card)
     predatory_card.processMonth()
     CreditCard.printSummary(predatory_card)
     predatory_card.charge(10000)
     CreditCard.printSummary(predatory_card)
-
-if __name__ == "__main__":
-    main()
