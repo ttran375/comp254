@@ -6,4 +6,4 @@
 
 ## Week 2
 
-- In-Class Exercises: SinglyLinkedList
+- In-Class Exercises: SinglyLinkedList, DoublyLinkedList
