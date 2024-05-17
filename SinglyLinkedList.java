@@ -248,6 +248,33 @@ public class SinglyLinkedList<E> implements Cloneable {
     return sb.toString();
   }
 
+  private void removeLast() {
+    // TODO Auto-generated method stub
+    // size-2 update that node to tail
+    Node walk = head;
+    while (walk.getNext() != tail) {
+      walk = walk.getNext();
+    }
+    tail = walk;
+    walk.setNext(null);
+    size--;
+  }
+
+  private boolean search(String string) {
+    // TODO Auto-generated method stub
+    // walkthrough all nodes and compare
+    // with airport that needs to be searched
+    Node walk = head;
+    boolean found = false;
+    while (walk != null) {
+      if (walk.getElement().equals(string)) {
+        found = true;
+      }
+      walk = walk.getNext();
+    }
+    return found;
+  }
+
   private void concatenate(SinglyLinkedList<String> list2) {
     // TODO Auto-generated method stub
     // logic for concatenation
@@ -277,28 +304,17 @@ public class SinglyLinkedList<E> implements Cloneable {
     // System.out.println(list);
     // //
 
-    // SinglyLinkedList<String> list1 = new SinglyLinkedList<String>();
-    // list1.addFirst("MSP");
-    // list1.addLast("ATL");
-    // list1.addLast("BOS");
-    // //
-    // list1.addFirst("LAX");
-    // System.out.println(list1);
-    // // list1.removeLast();
-    // System.out.println(list1);
-    // // System.out.println(list1.search("LAM"));
-    // //
-
-    // SinglyLinkedList<String> list2 = new SinglyLinkedList<String>();
-    // list2.addFirst("YYZ");
-    // list2.addFirst("YVR");
-    // System.out.println(list2);
-
     SinglyLinkedList<String> list1 = new SinglyLinkedList<String>();
     list1.addFirst("MSP");
     list1.addLast("ATL");
+    list1.addLast("BOS");
+    //
     list1.addFirst("LAX");
-    // System.out.println(list1);
+    System.out.println(list1);
+    list1.removeLast();
+    System.out.println(list1);
+    System.out.println(list1.search("LAM"));
+    //
 
     SinglyLinkedList<String> list2 = new SinglyLinkedList<String>();
     list2.addFirst("YYZ");
