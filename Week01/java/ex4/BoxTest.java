@@ -11,6 +11,6 @@ public class BoxTest {
 		//get the string from the box
 		System.out.println(box1.get());
 		//try to get an integer from the box
-		Integer res = (Integer) box1.get(); // error
+		// Integer res = (Integer) box1.get(); // error
 	}
 }
