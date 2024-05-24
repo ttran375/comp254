@@ -1,10 +1,9 @@
 public class DemoClass {
     public static void main(String[] args) {
-        int data, backup;
-        data = 12;
+        int[] data = { 12 };
+        int[] backup;
         backup = data;
-        backup = data;
-        data = 11;
-        System.out.println(backup);
+        data[0] = 11;
+        System.out.println(backup[0]);
     }
 }
