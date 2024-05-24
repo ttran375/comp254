@@ -2,8 +2,12 @@
 
 ## Week 1
 
-- In-Class Exercises: StudentManagement
+- In-Class Exercises: [Class](Week01)
 
 ## Week 2
 
-- In-Class Exercises: SinglyLinkedList, DoublyLinkedList
+- In-Class Exercises: [SinglyLinkedList, DoublyLinkedList](Week02)
+
+## Week 3
+
+- In-Class Exercises: CircularlyLinkedList
