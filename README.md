@@ -10,4 +10,8 @@
 
 ## Week 3
 
-- In-Class Exercises: CircularlyLinkedList
+- In-Class Exercises: [CircularlyLinkedList](Week03)
+
+## Week 4
+
+- In-Class Exercises: Running Time
