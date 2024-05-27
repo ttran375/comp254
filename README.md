@@ -6,11 +6,11 @@
 
 ## Week 2
 
-- In-Class Exercises: [SinglyLinkedList, DoublyLinkedList](Week02)
+- In-Class Exercises: [Singly Linked List, Doubly Linked List](Week02)
 
 ## Week 3
 
-- In-Class Exercises: [CircularlyLinkedList](Week03)
+- In-Class Exercises: [Circularly Linked List](Week03)
 
 ## Week 4
 
