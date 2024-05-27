@@ -1,16 +1,10 @@
+# -*- coding: utf-8 -*-
+
+
 class Node:
-    def __init__(self, element, next=None):
+    def __init__(self, element, next_node=None):
         self.element = element
-        self.next = next
-
-    def get_element(self):
-        return self.element
-
-    def get_next(self):
-        return self.next
-
-    def set_next(self, next_node):
-        self.next = next_node
+        self.next_node = next_node
 
 
 class SinglyLinkedList:
@@ -19,7 +13,7 @@ class SinglyLinkedList:
         self.tail = None
         self.size = 0
 
-    def size(self):
+    def __len__(self):
         return self.size
 
     def is_empty(self):
@@ -28,81 +22,58 @@ class SinglyLinkedList:
     def first(self):
         if self.is_empty():
             return None
-        return self.head.get_element()
+        return self.head.element
 
     def last(self):
         if self.is_empty():
             return None
-        return self.tail.get_element()
+        return self.tail.element
 
-    def add_first(self, element):
-        self.head = Node(element, self.head)
-        if self.size == 0:
+    def add_first(self, e):
+        newest = Node(e, next_node=self.head)
+        self.head = newest
+        if self.is_empty():
             self.tail = self.head
         self.size += 1
 
-    def add_last(self, element):
-        newest = Node(element, None)
+    def add_last(self, e):
+        newest = Node(e)
         if self.is_empty():
             self.head = newest
         else:
-            self.tail.set_next(newest)
+            self.tail.next_node = newest
         self.tail = newest
         self.size += 1
 
     def remove_first(self):
         if self.is_empty():
             return None
-        answer = self.head.get_element()
-        self.head = self.head.get_next()
+        answer = self.head.element
+        self.head = self.head.next_node
         self.size -= 1
-        if self.size == 0:
+        if self.is_empty():
             self.tail = None
         return answer
 
     def __eq__(self, other):
-        if other is None or not isinstance(other, SinglyLinkedList):
+        if not isinstance(other, SinglyLinkedList) or self.size != len(other):
             return False
-        if self.size != other.size:
-            return False
-        walk_a = self.head
-        walk_b = other.head
-        while walk_a is not None:
-            if walk_a.get_element() != walk_b.get_element():
+
+        node1, node2 = self.head, other.head
+        while node1 is not None:
+            if node1.element != node2.element:
                 return False
-            walk_a = walk_a.get_next()
-            walk_b = walk_b.get_next()
+            node1, node2 = node1.next_node, node2.next_node
+
         return True
 
-    def __copy__(self):
-        other = SinglyLinkedList()
-        if self.size > 0:
-            other.head = Node(self.head.get_element(), None)
-            walk = self.head.get_next()
-            other_tail = other.head
-            while walk is not None:
-                newest = Node(walk.get_element(), None)
-                other_tail.set_next(newest)
-                other_tail = newest
-                walk = walk.get_next()
-        return other
-
-    def __hash__(self):
-        h = 0
-        walk = self.head
-        while walk is not None:
-            h ^= hash(walk.get_element())
-            h = (h << 5) | (h >> 27)
-            walk = walk.get_next()
-        return h
-
     def __str__(self):
-        elements = []
-        walk = self.head
-        while walk is not None:
-            elements.append(str(walk.get_element()))
-            walk = walk.get_next()
-        return "(" + ", ".join(elements) + ")"
+        result = []
+        node = self.head
+        while node is not None:
+            result.append(str(node.element))
+            node = node.next_node
+        return "(" + ", ".join(result) + ")"
 
     def remove_last(self):
         if self.is_empty():
