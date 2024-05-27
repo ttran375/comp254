@@ -1,124 +1,67 @@
 class Node:
-    def __init__(self, element, next_node=None):
-        self.element = element
-        self.next_node = next_node
+    def __init__(self, data):
+        self.data = data
+        self.previous = None
+        self.next = None
 
 
-class SinglyLinkedList:
+class DoublyLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
-        self.size = 0
 
-    def __len__(self):
-        return self.size
+        # TO check weather list is empty or not?
 
     def is_empty(self):
-        return self.size == 0
-
-    def first(self):
-        if self.is_empty():
-            return None
-        return self.head.element
-
-    def last(self):
-        if self.is_empty():
-            return None
-        return self.tail.element
-
-    def add_first(self, e):
-        newest = Node(e, next_node=self.head)
-        self.head = newest
-        if self.is_empty():
-            self.tail = self.head
-        self.size += 1
-
-    def add_last(self, e):
-        newest = Node(e)
-        if self.is_empty():
-            self.head = newest
+        if self.head is None:
+            return True
         else:
-            self.tail.next_node = newest
-        self.tail = newest
-        self.size += 1
-
-    def remove_first(self):
-        if self.is_empty():
-            return None
-        answer = self.head.element
-        self.head = self.head.next_node
-        self.size -= 1
-        if self.is_empty():
-            self.tail = None
-        return answer
-
-    def __eq__(self, other):
-        if not isinstance(other, SinglyLinkedList) or self.size != len(other):
             return False
 
-        node1, node2 = self.head, other.head
-        while node1 is not None:
-            if node1.element != node2.element:
-                return False
-            node1, node2 = node1.next_node, node2.next_node
+    def add_node(self, data):
+        #  Creating New Node
+        newNode = Node(data)
 
-        return True
+        # Checking where the head and tail pointer is pointing.
+        # if first node is added to the list then below condition should be true.
+        if self.head is None:
+            self.head = newNode
+            newNode.previous = newNode.next = None
 
-    def __str__(self):
-        result = []
-        node = self.head
-        while node is not None:
-            result.append(str(node.element))
-            node = node.next_node
-        return "(" + ", ".join(result) + ")"
-
-    def remove_last(self):
-        if self.is_empty():
-            return None
-        if self.size == 1:
-            return self.remove_first()
-        walk = self.head
-        while walk.next_node != self.tail:
-            walk = walk.next_node
-        answer = self.tail.element
-        self.tail = walk
-        self.tail.next_node = None
-        self.size -= 1
-        return answer
-
-    def search(self, element):
-        walk = self.head
-        while walk is not None:
-            if walk.element == element:
-                return True
-            walk = walk.next_node
-        return False
-
-    def concatenate(self, other_list):
-        if self.is_empty():
-            self.head = other_list.head
         else:
-            self.tail.next_node = other_list.head
-        self.size += other_list.size
-        if other_list.tail:
-            self.tail = other_list.tail
+            # Addding new node at the last
+            self.tail.next = newNode
+            newNode.previous = self.tail
+            newNode.next = None
+        self.tail = newNode
+
+    def display_list(self):
+        # Creating temp pointer to travers
+        temp = self.head
+        if temp is not None:
+            while temp is not None:
+                print(temp.data, end=" -> ")
+                temp = temp.next
+            else:
+                print("NULL")
+        else:
+            print("List does not have any nodes")
+
+
+def clone_linked_list(l1):
+    dl = DoublyLinkedList()
+    temp = l1.head
+    if temp is not None:
+        while temp is not None:
+            dl.add_node(temp.data)
+            temp = temp.next
+    return dl
 
 
 if __name__ == "__main__":
-    list1 = SinglyLinkedList()
-    list1.add_first("MSP")
-    list1.add_last("ATL")
-    list1.add_last("BOS")
-    list1.add_first("LAX")
-    print(list1)
-    list1.remove_last()
-    print(list1)
-    print(list1.search("LAM"))
-
-    list2 = SinglyLinkedList()
-    list2.add_first("YYZ")
-    list2.add_first("YVR")
-    print(list2)
-
-    list1.concatenate(list2)
-    print(list1)
+    list1 = DoublyLinkedList()
+    list1.add_node("MSP")
+    list1.add_node("ATL")
+    list1.add_node("BOS")
+    # list1.remove_first()
+    print(list1.display_list())
