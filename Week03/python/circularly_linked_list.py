@@ -69,11 +69,34 @@ class CircularlyLinkedList:
             current = current.next_node
         return "[" + ", ".join(result) + "]"
 
+    def concatenate(self, other):
+        if self.is_empty():
+            self.tail = other.tail
+            self.size = other.size
+        elif not other.is_empty():
+            other_head = other.tail.next_node
+            other.tail.next_node = self.tail.next_node
+            self.tail.next_node = other_head
+            self.tail = other.tail
+            self.size += other.size
+
 
 if __name__ == "__main__":
-    originalList = CircularlyLinkedList()
-    originalList.add_last("MSP")
-    originalList.add_last("ATL")
-    originalList.add_last("BOS")
+    circularlyList1 = CircularlyLinkedList()
+    circularlyList1.add_first("LAX")
+    circularlyList1.add_last("MSP")
+    circularlyList1.add_last("ATL")
+    circularlyList1.add_last("BOS")
 
-    print(originalList)  # Should print: [MSP, ATL, BOS]
+    print(circularlyList1)
+
+    circularlyList2 = CircularlyLinkedList()
+    circularlyList2.add_last("YYZ")
+    circularlyList2.add_last("YVR")
+
+    print(circularlyList2)
+
+    circularlyList1.concatenate(circularlyList2)
+
+    print(circularlyList1)
+    print(circularlyList2)
