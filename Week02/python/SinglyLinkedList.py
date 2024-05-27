@@ -78,29 +78,33 @@ class SinglyLinkedList:
     def remove_last(self):
         if self.is_empty():
             return None
+        if self.size == 1:
+            return self.remove_first()
         walk = self.head
-        while walk.get_next() != self.tail:
-            walk = walk.get_next()
+        while walk.next_node != self.tail:
+            walk = walk.next_node
+        answer = self.tail.element
         self.tail = walk
-        walk.set_next(None)
+        self.tail.next_node = None
         self.size -= 1
+        return answer
 
     def search(self, element):
         walk = self.head
-        found = False
         while walk is not None:
-            if walk.get_element() == element:
-                found = True
-            walk = walk.get_next()
-        return found
+            if walk.element == element:
+                return True
+            walk = walk.next_node
+        return False
 
     def concatenate(self, other_list):
         if self.is_empty():
             self.head = other_list.head
         else:
-            self.tail.set_next(other_list.head)
+            self.tail.next_node = other_list.head
         self.size += other_list.size
-        self.tail = other_list.tail
+        if other_list.tail:
+            self.tail = other_list.tail
 
 
 if __name__ == "__main__":
