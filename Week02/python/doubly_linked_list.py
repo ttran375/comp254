@@ -47,15 +47,14 @@ class DoublyLinkedList:
         else:
             print("List does not have any nodes")
 
-
-def clone_linked_list(l1):
-    dl = DoublyLinkedList()
-    temp = l1.head
-    if temp is not None:
-        while temp is not None:
-            dl.add_node(temp.data)
-            temp = temp.next
-    return dl
+    def concatenate(self, other_list):
+        if self.is_empty():
+            self.head = other_list.head
+            self.tail = other_list.tail
+        elif not other_list.is_empty():
+            self.tail.next = other_list.head
+            other_list.head.previous = self.tail
+            self.tail = other_list.tail
 
 
 if __name__ == "__main__":
@@ -63,5 +62,16 @@ if __name__ == "__main__":
     list1.add_node("MSP")
     list1.add_node("ATL")
     list1.add_node("BOS")
-    # list1.remove_first()
-    print(list1.display_list())
+    list1.add_node("LAX")
+    print("List 1:")
+    list1.display_list()
+
+    list2 = DoublyLinkedList()
+    list2.add_node("YYZ")
+    list2.add_node("YVR")
+    print("List 2:")
+    list2.display_list()
+
+    list1.concatenate(list2)
+    print("Concatenated List 1 and List 2:")
+    list1.display_list()
