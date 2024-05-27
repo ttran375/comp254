@@ -98,5 +98,11 @@ public class StringExperiment {
     long endTime = System.currentTimeMillis();
     long elapsed = endTime - startTime;
     System.out.println(String.format("n: %9d took %12d milliseconds", 10000, elapsed));
+
+    long startTime1 = System.currentTimeMillis();
+    String temp1 = repeat2('-', 10000);
+    long endTime1 = System.currentTimeMillis();
+    long elapsed1 = endTime1 - startTime1;
+    System.out.println(String.format("Algorithm 2 n: %9d took %12d milliseconds", 10000, elapsed1));
   }
 }
