@@ -32,7 +32,7 @@ that implements this algorithm and a main method to test it.
 **Hint:** Numbers in $0, n-1$ form an arithmetic progression whose sum
 is known.
 
-To solve this problem, we can leverage the fact that the sum of the first $n$ natural numbers is given by the formula $\frac{n(n-1)}{2}$. By calculating the sum of numbers from $0$ to $n-1$ and then subtracting the sum of the elements in the array, we can find the missing number.
+We can leverage the fact that the sum of the first $n$ natural numbers is given by the formula $\frac{n(n-1)}{2}$ and then subtracting the sum of the elements in the array, we can find the missing number.
 
 **If your first name starts with a letter from K-Z inclusively:**
 
