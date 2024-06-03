@@ -1,0 +1,112 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "BoxTest",
+            "request": "launch",
+            "mainClass": "BoxTest",
+            "projectName": "comp254_b2d3fcc0"
+        },
+        {
+            "type": "java",
+            "name": "BoxedItem",
+            "request": "launch",
+            "mainClass": "BoxedItem",
+            "projectName": "comp254_b2d3fcc0"
+        },
+        {
+            "type": "java",
+            "name": "CircularlyLinkedList",
+            "request": "launch",
+            "mainClass": "CircularlyLinkedList",
+            "projectName": "comp254_b2d3fcc0"
+        },
+        {
+            "type": "java",
+            "name": "CreditCard",
+            "request": "launch",
+            "mainClass": "CreditCard",
+            "projectName": "comp254_b2d3fcc0"
+        },
+        {
+            "type": "java",
+            "name": "DemoClass",
+            "request": "launch",
+            "mainClass": "DemoClass",
+            "projectName": "comp254_b2d3fcc0"
+        },
+        {
+            "type": "java",
+            "name": "DoublyLinkedList",
+            "request": "launch",
+            "mainClass": "DoublyLinkedList",
+            "projectName": "comp254_b2d3fcc0"
+        },
+        {
+            "type": "java",
+            "name": "Factorial",
+            "request": "launch",
+            "mainClass": "Factorial",
+            "projectName": "comp254_b2d3fcc0"
+        },
+        {
+            "type": "java",
+            "name": "GenericBoxTest",
+            "request": "launch",
+            "mainClass": "GenericBoxTest",
+            "projectName": "comp254_b2d3fcc0"
+        },
+        {
+            "type": "java",
+            "name": "GenericMethodTest",
+            "request": "launch",
+            "mainClass": "GenericMethodTest",
+            "projectName": "comp254_b2d3fcc0"
+        },
+        {
+            "type": "java",
+            "name": "PredatoryCreditCard",
+            "request": "launch",
+            "mainClass": "PredatoryCreditCard",
+            "projectName": "comp254_b2d3fcc0"
+        },
+        {
+            "type": "java",
+            "name": "PrefixAverage",
+            "request": "launch",
+            "mainClass": "PrefixAverage",
+            "projectName": "comp254_b2d3fcc0"
+        },
+        {
+            "type": "java",
+            "name": "SinglyLinkedList",
+            "request": "launch",
+            "mainClass": "SinglyLinkedList",
+            "projectName": "comp254_b2d3fcc0"
+        },
+        {
+            "type": "java",
+            "name": "StringExperiment",
+            "request": "launch",
+            "mainClass": "StringExperiment",
+            "projectName": "comp254_b2d3fcc0"
+        },
+        {
+            "type": "java",
+            "name": "StudentDemo",
+            "request": "launch",
+            "mainClass": "StudentDemo",
+            "projectName": "comp254_b2d3fcc0"
+        }
+    ]
+}
