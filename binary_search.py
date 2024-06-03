@@ -19,21 +19,20 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-def disjoint1(A, B, C):
-  """Return True if there is no element common to all three lists."""
-  for a in A:
-    for b in B:
-      for c in C:
-        if a == b == c:
-          return False      # we found a common value
-  return True               # if we reach this, sets are disjoint
+def binary_search(data, target, low, high):
+  """Return True if target is found in indicated portion of a Python list.
 
-def disjoint2(A, B, C):
-  """Return True if there is no element common to all three lists."""
-  for a in A:
-    for b in B:
-      if a == b:            # only check C if we found match from A and B
-        for c in C:
-          if a == c         # (and thus a == b == c)
-            return False    # we found a common value
-  return True               # if we reach this, sets are disjoint
+  The search only considers the portion from data[low] to data[high] inclusive.
+  """
+  if low > high:
+    return False                    # interval is empty; no match
+  else:
+    mid = (low + high) // 2
+    if target == data[mid]:         # found a match
+      return True
+    elif target < data[mid]:
+      # recur on the portion left of the middle
+      return binary_search(data, target, low, mid - 1)
+    else:
+      # recur on the portion right of the middle
+      return binary_search(data, target, mid + 1, high)
