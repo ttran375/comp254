@@ -44,3 +44,7 @@ method to test it.
 **Hint** The sum of every two integers in A is always less or equal to
 twice the maximum element.
 
+- **Step 1**: Find the maximum element in the array.
+- **Step 2**: Create a boolean array `sumExists` of size $2 \times \text{maxA} + 1$.
+- **Step 3**: Iterate through each pair of elements in the array and mark the possible sums in the`sumExists` array.
+- **Step 4**: Find and return the smallest index in the `sumExists` array that is still `false`.
