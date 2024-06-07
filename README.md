@@ -15,3 +15,4 @@
 ## Week 4: Analysis of Algorithms
 
 - In-Class Exercises: Running Time
+- Labs: Primitive Operations, Big O Notation
