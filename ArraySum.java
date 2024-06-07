@@ -38,9 +38,9 @@ public class ArraySum {
 
   public static void main(String[] args) {
 
-    int[] data = { 3, 4, 8, 6 ,2 };
-    int max = findMax(data, data.length);
-    System.out.println("The maximum value is: " + max);
+    // // int[] data = { 3, 4, 8, 6 ,2 };
+    // int max = findMax(data, data.length);
+    // System.out.println("The maximum value is: " + max);
 
     // for (int limit = 1; limit < 100; limit++) {
     // int[] data = new int[limit];
@@ -56,5 +56,20 @@ public class ArraySum {
     // if (binary != answer)
     // System.out.println("Problem with binary sum for n=" + limit);
     // }
+    int limit = 100000;
+    int[] data = new int[limit];
+    for (int k = 0; k < limit; k++)
+      data[k] = k + 1;
+
+    int answer = limit * (limit + 1) / 2;
+
+    int linear = linearSum(data, limit);
+    if (linear != answer)
+      System.out.println("Problem with linear sum for n=" + limit);
+
+    int binary = binarySum(data, 0, limit - 1);
+    if (binary != answer)
+      System.out.println("Problem with binary sum for n=" + limit);
+
   }
 }
