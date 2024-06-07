@@ -20,7 +20,13 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 def factorial(n):
-  if n == 0:
-    return 1
-  else:
-    return n * factorial(n-1)
+    if n == 0:
+        return 1
+    elif n < 0:
+        print("Negative n not allowed")
+    else:
+        return n * factorial(n - 1)
+
+
+if __name__ == '_main_':
+    print(factorial(6))
