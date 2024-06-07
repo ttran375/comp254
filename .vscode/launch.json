@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Factorial",
+            "request": "launch",
+            "mainClass": "Factorial",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "BinarySearchExample",
             "request": "launch",
             "mainClass": "BinarySearchExample",
