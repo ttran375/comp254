@@ -16,3 +16,7 @@
 
 - In-Class Exercises: Running Time
 - Labs: Primitive Operations, Big O Notation
+
+## Week 5
+
+- In-Class Exercises: Iterative or Recursive
