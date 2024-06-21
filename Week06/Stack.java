@@ -20,20 +20,46 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+package stacks;
+
 /**
- * Demonstration of a recursive (and very bad) solution to element uniqueness problem.
+ * A collection of objects that are inserted and removed according to the last-in
+ * first-out principle. Although similar in purpose, this interface differs from
+ * java.util.Stack.
  *
  * @author Michael T. Goodrich
  * @author Roberto Tamassia
  * @author Michael H. Goldwasser
  */
-public class Unique3 {
+public interface Stack<E> {
 
-  /** Returns true if there are no duplicate values from data[low] through data[high].*/
-  public static boolean unique3(int[] data, int low, int high) {
-    if (low >= high) return true;                         // at most one item
-    else if (!unique3(data, low, high-1)) return false;   // duplicate in first n-1
-    else if (!unique3(data, low+1, high)) return false;   // duplicate in last n-1
-    else return (data[low] != data[high]);                // do first and last differ?
-  }
+  /**
+   * Returns the number of elements in the stack.
+   * @return number of elements in the stack
+   */
+  int size();
+
+  /**
+   * Tests whether the stack is empty.
+   * @return true if the stack is empty, false otherwise
+   */
+  boolean isEmpty();
+
+  /**
+   * Inserts an element at the top of the stack.
+   * @param e   the element to be inserted
+   */
+  void push(E e);
+
+  /**
+   * Returns, but does not remove, the element at the top of the stack.
+   * @return top element in the stack (or null if empty)
+   */
+  E top();
+
+  /**
+   * Removes and returns the top element from the stack.
+   * @return element removed (or null if empty)
+   */
+  E pop();
 }
