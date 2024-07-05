@@ -31,3 +31,7 @@
 ## Week 7: Midterm Test
 
 - Tests: [Mid term (Hands-on)](https://github.com/ttran375/comp254-test1)
+
+## Week 9: Midterm Test
+
+- In-Class Exercises: [Lists and Iterators](Week09)
