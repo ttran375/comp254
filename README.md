@@ -30,4 +30,4 @@
 
 ## Week 7: Midterm Test
 
-- Tests: [Mid term (Hands-on)](comp254-test1)
+- Tests: [Mid term (Hands-on)](https://github.com/ttran375/comp254-test1)
