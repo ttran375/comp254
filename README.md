@@ -27,3 +27,7 @@
 
 - In-Class Exercises: Midterm Review, Stacks and Queues
 - Assignments: [Using Recursion](https://github.com/ttran375/comp254-assignment3)
+
+## Week 7: Midterm Test
+
+- Tests: [Mid term (Hands-on)](comp254-test1)
