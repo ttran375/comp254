@@ -25,12 +25,14 @@
 
 ## Week 6: Stacks and Queues
 
-- In-Class Exercises: Midterm Review, Stacks and Queues
+- In-Class Exercises: [Stacks and Queues](Week06)
 - Assignments: [Using Recursion](https://github.com/ttran375/comp254-assignment3)
 
 ## Week 7: Lists and Iterators
 
-- In-Class Exercises: [Lists and Iterators](Week09)
+- In-Class Exercises: [Lists and Iterators](Week07)
 - Tests: [Mid term (Hands-on)](https://github.com/ttran375/comp254-test1)
 
 ## Week 9: Trees
+
+- In-Class Exercises: Trees
