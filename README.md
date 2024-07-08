@@ -32,6 +32,6 @@
 
 - Tests: [Mid term (Hands-on)](https://github.com/ttran375/comp254-test1)
 
-## Week 9: Midterm Test
+## Week 9: Lists and Iterators
 
 - In-Class Exercises: [Lists and Iterators](Week09)
