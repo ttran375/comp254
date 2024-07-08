@@ -310,6 +310,8 @@ public class LinkedBinaryTree<E> extends AbstractBinaryTree<E> {
 	  Position<String> CPosition = lbt.addRight(root, "C");
 	  Position<String> EPosition = lbt.addLeft(BPosition, "E");
 	  Position<String> FPosition = lbt.addRight(BPosition, "F");
+    Position<String> KPosition = lbt.addLeft(BPosition, "K");
+    Position<String> GPosition = lbt.addRight(BPosition, "G");
 
 	  //
 	  printPreorder(lbt);
