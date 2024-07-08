@@ -28,10 +28,9 @@
 - In-Class Exercises: Midterm Review, Stacks and Queues
 - Assignments: [Using Recursion](https://github.com/ttran375/comp254-assignment3)
 
-## Week 7: Midterm Test
-
-- Tests: [Mid term (Hands-on)](https://github.com/ttran375/comp254-test1)
-
-## Week 9: Lists and Iterators
+## Week 7: Lists and Iterators
 
 - In-Class Exercises: [Lists and Iterators](Week09)
+- Tests: [Mid term (Hands-on)](https://github.com/ttran375/comp254-test1)
+
+## Week 9: Trees
