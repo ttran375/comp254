@@ -303,13 +303,13 @@ public class LinkedBinaryTree<E> extends AbstractBinaryTree<E> {
   {
 	  //create and populate a linked binary tree
 	  LinkedBinaryTree lbt = new LinkedBinaryTree();
-	  Position<String> root =lbt.addRoot("ICET");
+	  Position<String> root =lbt.addRoot("A");
 	  
 	  //	  
-	  Position<String> softwarePosition = lbt.addLeft(root, "Software");
-	  Position<String> networkingPosition = lbt.addRight(root, "Networking");
-	  Position<String> set = lbt.addLeft(softwarePosition, "SET");
-	  Position<String> ig = lbt.addRight(softwarePosition, "IG");
+	  Position<String> BPosition = lbt.addLeft(root, "B");
+	  Position<String> CPosition = lbt.addRight(root, "C");
+	  Position<String> EPosition = lbt.addLeft(BPosition, "E");
+	  Position<String> FPosition = lbt.addRight(BPosition, "F");
 
 	  //
 	  printPreorder(lbt);
