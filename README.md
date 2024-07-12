@@ -36,3 +36,7 @@
 ## Week 9: Trees
 
 - In-Class Exercises: Trees
+
+## Week 10: Trees
+
+- Assignments: [Using ADT Stacks, Queues, and Lists](https://github.com/ttran375/comp254-assignment4)
