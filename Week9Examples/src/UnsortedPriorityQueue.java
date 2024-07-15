@@ -67,7 +67,7 @@ public class UnsortedPriorityQueue<K,V> extends AbstractPriorityQueue<K,V> {
   public Entry<K,V> insert(K key, V value) throws IllegalArgumentException {
     checkKey(key);    // auxiliary key-checking method (could throw exception)
     Entry<K,V> newest = new PQEntry<>(key, value);
-    list.addLast(newest);
+    list.addLast(newest); //O(1)
     return newest;
   }
 
@@ -78,7 +78,7 @@ public class UnsortedPriorityQueue<K,V> extends AbstractPriorityQueue<K,V> {
   @Override
   public Entry<K,V> min() {
     if (list.isEmpty()) return null;
-    return findMin().getElement();
+    return findMin().getElement(); //O(n)
   }
 
   /**
@@ -88,7 +88,7 @@ public class UnsortedPriorityQueue<K,V> extends AbstractPriorityQueue<K,V> {
   @Override
   public Entry<K,V> removeMin() {
     if (list.isEmpty()) return null;
-    return list.remove(findMin());
+    return list.remove(findMin()); //O(n)
   }
 
   /**
@@ -105,6 +105,7 @@ public class UnsortedPriorityQueue<K,V> extends AbstractPriorityQueue<K,V> {
 	  UnsortedPriorityQueue<String,String> queue = new UnsortedPriorityQueue<String,String>();
 	  queue.insert("5", "A");
 	  queue.insert("9", "C");
+    queue.insert("9", "G");
 	  queue.insert("3", "B");
 	  //
 	  // list all entries
