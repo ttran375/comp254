@@ -35,6 +35,7 @@
 
 ## Week 9: Trees
 
+- Labs: Lab Week 10
 - In-Class Exercises: [Trees](Week09)
 
 ## Week 10: Trees
