@@ -35,7 +35,7 @@
 
 ## Week 9: Trees
 
-- In-Class Exercises: Trees
+- In-Class Exercises: [Trees](Week09)
 
 ## Week 10: Trees
 
