@@ -1,7 +1,7 @@
 import java.util.Comparator;
 import java.util.Date;
 
-public class Employee {
+class Employee {
     private String fullName;
     private String socialInsuranceNumber;
     private Date hireDate;
@@ -49,26 +49,11 @@ public class Employee {
                 ", hireDate=" + hireDate +
                 '}';
     }
-
-    // Main method for testing
-    public static void main(String[] args) {
-        // Create a new employee instance
-        Employee emp = new Employee("John Doe", "123-45-6789", new Date());
-
-        // Display the employee details using toString method
-        System.out.println(emp.toString());
-    }
 }
 
 class HireDateComparator implements Comparator<Employee> {
     @Override
     public int compare(Employee o1, Employee o2) {
-        if (o1.getHireDate().before(o2.getHireDate())) {
-            return -1;
-        } else if (o1.getHireDate().after(o2.getHireDate())) {
-            return 1;
-        } else {
-            return 0;
-        }
+        return o1.getHireDate().compareTo(o2.getHireDate());
     }
 }
