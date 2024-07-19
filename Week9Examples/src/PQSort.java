@@ -21,21 +21,18 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import java.util.Comparator;
 
-public class StringLengthComparator implements Comparator<String> {
-
-  /** Compares two strings according to their lengths. */
-  public int compare(String a, String b) {
-    if (a.length() < b.length()) return -1;
-    else if (a.length() == b.length()) return 0;
-    else return 1;
+public class PQSort {
+  /** Sorts sequence S, using initially empty priority queue P to produce the order. */
+  public static <E> void pqSort(PositionalList<E> S, PriorityQueue<E,?> P) {
+    int n = S.size();
+    for (int j=0; j < n; j++) {
+      E element = S.remove(S.first());
+      P.insert(element, null);             // element is key; null value
+    }
+    for (int j=0; j < n; j++) {
+      E element = P.removeMin().getKey();
+      S.addLast(element);                  // the smallest key in P is next placed in S
+    }
   }
-
-  public static void main(String[] args) {
-    String data[] = {"Apple", "Banana", "Grape", "Grapefruit", "Plum", "Raspberry", "Strawberry"};
-    java.util.Arrays.sort(data, new StringLengthComparator());
-    System.out.println("data: " + java.util.Arrays.toString(data));
-  }
-
 }
