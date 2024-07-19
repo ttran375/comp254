@@ -35,7 +35,7 @@
 
 ## Week 8: Lists and Iterators (Continued)
 
-- Labs: Lab Week 10
+- Labs: Lab 2
 
 ## Week 9: Trees
 
