@@ -45,3 +45,6 @@
 ## Week 10: Priority Queues and Heaps
 
 - In-Class Exercises: [Priority Queues and Heaps](priority_queues_heaps)
+
+## Week 11: Maps, Hashtables, and Sets 
+
