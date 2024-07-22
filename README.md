@@ -35,7 +35,7 @@
 
 ## Week 8: Lists and Iterators (Continued)
 
-- Labs: Lab 2
+- In-Class Exercises: [Lists and Iterators](lists_iterators)
 
 ## Week 9: Trees
 
@@ -45,6 +45,11 @@
 ## Week 10: Priority Queues and Heaps
 
 - In-Class Exercises: [Priority Queues and Heaps](priority_queues_heaps)
+- Labs: Lab 2
+- Assignments: [Using Trees and Priority Queues](https://github.com/ttran375/comp254-assignment4)
 
-## Week 11: Maps, Hashtables, and Sets 
+## Week 11: Maps, Hashtables, and Sets
 
+- In-Class Exercises: Maps, Hashtables, and Sets
+- Labs: Lab 3
+<!-- - Assignments: -->
