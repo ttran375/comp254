@@ -50,6 +50,6 @@
 
 ## Week 11: Maps, Hashtables, and Sets
 
-- In-Class Exercises: Maps, Hashtables, and Sets
+- In-Class Exercises: [Maps, Hashtables, and Sets](maps-hashtables-sets)
 - Labs: Lab 3
 - Assignments: Using Maps and Hash Tables
