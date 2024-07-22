@@ -52,4 +52,4 @@
 
 - In-Class Exercises: Maps, Hashtables, and Sets
 - Labs: Lab 3
-<!-- - Assignments: -->
+- Assignments: Using Maps and Hash Tables
