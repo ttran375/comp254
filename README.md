@@ -53,3 +53,8 @@
 - In-Class Exercises: [Maps, Hashtables, and Sets](maps-hashtables-sets)
 - Labs: Lab 3
 - Assignments: Using Maps and Hash Tables
+
+## Week 12: Search Trees
+
+- In-Class Exercises: [Search Trees](search-trees)
+- Labs: Lab 4
