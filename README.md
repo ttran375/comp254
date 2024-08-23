@@ -57,5 +57,5 @@
 ## Week 12: Search Trees
 
 - In-Class Exercises: [Search Trees](search-trees)
-- Labs: Lab 4
+- Labs: [Lab 4](https://github.com/ttran375/comp254-lab4)
 - Assignments: [Search Trees and Sorting](https://github.com/ttran375/comp254-assignment7)
