@@ -51,7 +51,7 @@
 ## Week 11: Maps, Hashtables, and Sets
 
 - In-Class Exercises: [Maps, Hashtables, and Sets](maps-hashtables-sets)
-- Labs: Lab 3
+- Labs: [Lab 3](https://github.com/ttran375/comp254-lab3)
 - Assignments: [Using Maps and Hash Tables](https://github.com/ttran375/comp254-assignment6)
 
 ## Week 12: Search Trees
