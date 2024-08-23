@@ -46,15 +46,16 @@
 
 - In-Class Exercises: [Priority Queues and Heaps](priority_queues_heaps)
 - Labs: Lab 2
-- Assignments: [Using Trees and Priority Queues](https://github.com/ttran375/comp254-assignment4)
+- Assignments: [Using Trees and Priority Queues](https://github.com/ttran375/comp254-assignment5)
 
 ## Week 11: Maps, Hashtables, and Sets
 
 - In-Class Exercises: [Maps, Hashtables, and Sets](maps-hashtables-sets)
 - Labs: Lab 3
-- Assignments: Using Maps and Hash Tables
+- Assignments: [Using Maps and Hash Tables](https://github.com/ttran375/comp254-assignment6)
 
 ## Week 12: Search Trees
 
 - In-Class Exercises: [Search Trees](search-trees)
 - Labs: Lab 4
+- Assignments: [Search Trees and Sorting](https://github.com/ttran375/comp254-assignment7)
