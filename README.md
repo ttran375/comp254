@@ -45,7 +45,7 @@
 ## Week 10: Priority Queues and Heaps
 
 - In-Class Exercises: [Priority Queues and Heaps](priority_queues_heaps)
-- Labs: Lab 2
+- Labs: [Lab 2](https://github.com/ttran375/comp254-lab2)
 - Assignments: [Using Trees and Priority Queues](https://github.com/ttran375/comp254-assignment5)
 
 ## Week 11: Maps, Hashtables, and Sets
